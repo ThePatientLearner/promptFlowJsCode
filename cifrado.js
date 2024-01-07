@@ -15,7 +15,7 @@
 
         function menu() {
             pr = prompt("¿Quieres ver el mensaje o encriptar uno nuevo? (marca un número 1 o 2)");
-            const entradaMenu = prompt("1. Nueva encriptación y sustituir el mensaje actual\n2. Leer encriptación:");
+            const entradaMenu = prompt("1. Nueva encriptación y sustituir el mensaje actual\n2. Leer encriptación:\n3.Descodificar mensaje nuevo por fuerza bruta");
 
             return entradaMenu;
         }
@@ -45,6 +45,35 @@
             }
             return nuevoMensajeCifrado;
         }
+        
+        function fuerzaBruta(mensajeCodificado) {
+            for (let i = 0; i < 26; i++) {
+                let mensajeDescifrado = "";
+        
+                for (let letra of mensajeCodificado) {
+                    if (alfabeto.includes(letra)) {
+                        let numeroLetraActual = alfabeto.indexOf(letra);
+                        mensajeDescifrado += alfabeto[(numeroLetraActual + i + 26) % 26];
+                    } else {
+                        mensajeDescifrado += letra;
+                    }
+                }
+        
+                let siOno = prompt("Descodificador número " + i + " ¿Es este mensaje correcto? (si) o intro para continuar\n"+mensajeDescifrado);
+        
+                while (!(siOno.toLowerCase() === "si")) {
+                    siOno = prompt("Por favor, introduce una respuesta correcta (si/no)");
+                }
+        
+                if (siOno.toLowerCase() === "si") {
+                    return mensajeDescifrado;
+                }
+            }
+        
+            // Si no se encuentra ninguna respuesta "si", puedes retornar algo o manejarlo según tus necesidades.
+            return "No se encontró una respuesta válida.";
+        }
+
 
         // Comenzamos el programa:
         let mensajeCifrado = cargarMensaje();
@@ -80,8 +109,11 @@
             }
             } else if (numeroMenu === "salir") {
                 pr = prompt("bye!");
-            } else {
-                pr = prompt("Por favor, escriba un número (1) o (2). También puede escribir 'salir' para finalizar el programa");
+            } else if (numeroMenu=3){
+                let nuevoFuerzaBruta = prompt("Escriba el mensaje a romper por fuerza bruta:")
+                fuerzaBruta(nuevoFuerzaBruta)
+            }else {
+                pr = prompt("Por favor, escriba un número (1) o (2) o (3). También puede escribir 'salir' para finalizar el programa");
             }
         }
 
