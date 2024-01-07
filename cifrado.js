@@ -104,9 +104,9 @@
                     mensajeCifrado = desencriptarMensaje(mensajeCifrado);
                     pr = prompt("Mensaje cifrado : " + mensajeCifrado);
                 } else {
-                    pr = prompt("----------------------");
+                   
                     pr = prompt("CONTRASEÑA INCORRECTA!");
-                    pr = prompt("----------------------\n");
+                  
                 }
 
             } else if (numeroMenu === "salir") {
