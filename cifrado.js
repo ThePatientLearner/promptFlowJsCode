@@ -93,10 +93,9 @@
                     guardarMensaje(mensajeCifrado);
                     pr = prompt("Mensaje actual cifrado : " + mensajeCifrado);
                 } else {
-                    pr = prompt("----------------------");
+                    
                     pr = prompt("CONTRASEÑA INCORRECTA!");
-                    pr = prompt("----------------------\n");
-                }
+              }
             } else if (numeroMenu === "2") {
                 const contrasena = parseInt(prompt("Díganos la contraseña para darle acceso:"));
 
