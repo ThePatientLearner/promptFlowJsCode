@@ -14,8 +14,8 @@
         }
 
         function menu() {
-            pr = prompt("¿Quieres ver el mensaje o encriptar uno nuevo? (marca un número 1 , 2 , 3)");
-            const entradaMenu = prompt("1. Nueva encriptación y sustituir el mensaje actual\n2. Leer encriptación:\n3.Descodificar mensaje nuevo por fuerza bruta");
+            
+            const entradaMenu = prompt("Marca un numero o escribe salir:\n1. Nueva encriptación y sustituir el mensaje actual\n2. Leer encriptación:\n3.Descodificar mensaje nuevo por fuerza bruta\nEscribe(salir)");
 
             return entradaMenu;
         }
