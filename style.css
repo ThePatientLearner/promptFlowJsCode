@@ -12,5 +12,8 @@ body {
     border: 2px solid #ccc;
     padding: 10px;
     overflow-y: auto;
+    text-align: center;
+    font-size: larger;
     
 }
+
