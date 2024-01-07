@@ -62,7 +62,7 @@
                 let siOno = prompt("Descodificador número " + i + " ¿Es este mensaje correcto? (si) o intro para continuar\n"+mensajeDescifrado);
         
                 while (!(siOno.toLowerCase() === "si")) {
-                    siOno = prompt("Por favor, introduce una respuesta correcta (si/no)");
+                    break
                 }
         
                 if (siOno.toLowerCase() === "si") {
