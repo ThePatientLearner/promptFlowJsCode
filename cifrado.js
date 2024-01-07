@@ -99,17 +99,20 @@
                 }
             } else if (numeroMenu === "2") {
                 const contrasena = parseInt(prompt("Díganos la contraseña para darle acceso:"));
+
                 if (contrasena === combinacionSecreta) {
-                mensajeCifrado = desencriptarMensaje(mensajeCifrado);
-                pr = prompt("Mensaje cifrado : " + mensajeCifrado);
-            } else {
-                pr = prompt("----------------------");
-                pr = prompt("CONTRASEÑA INCORRECTA!");
-                pr = prompt("----------------------\n");
-            }
+                    mensajeCifrado = desencriptarMensaje(mensajeCifrado);
+                    pr = prompt("Mensaje cifrado : " + mensajeCifrado);
+                } else {
+                    pr = prompt("----------------------");
+                    pr = prompt("CONTRASEÑA INCORRECTA!");
+                    pr = prompt("----------------------\n");
+                }
+
             } else if (numeroMenu === "salir") {
                 pr = prompt("bye!");
-            } else if (numeroMenu=3){
+
+            } else if (numeroMenu === "3"){
                 let nuevoFuerzaBruta = prompt("Escriba el mensaje a romper por fuerza bruta:")
                 fuerzaBruta(nuevoFuerzaBruta)
             }else {
