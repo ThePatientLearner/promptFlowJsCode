@@ -1,5 +1,5 @@
 
-        const combinacionSecreta = 6500;
+        const combinacionSecreta = 1234;
         const alfabeto = "abcdefghijklmnopqrstuvwxyz";
         const claveAlmacenamiento = "mensaje_encriptado";
         let pr;
